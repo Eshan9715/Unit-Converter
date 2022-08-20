@@ -10,5 +10,69 @@
  
   </style>
 </head>
+<body>
+  <div class="p-5 bg-primary text-white text-center">
+      <h1>Unit converter</h1>
+      <p>Most needed and demanded unit convereter</p> 
+  </div>
+
+  <div class="m-auto text-center w-50 p-3">
+    <form action="/action_page.php">
+      <label for="sely" class="form-label">Categories:</label>
+      <select class="form-select" id="sel" name="sellist">
+
+        <option>Area</option>
+        <option>Energy</option>
+        <option>Length</option>
+        <option>Mass</option>
+        <option>Pressure</option>
+        <option>Temperature</option>
+        <option>Time</option>
+        <option>Speed</option>
+
+      </select>
+      <input type="button" class= "btn bg-primary w-25 m-4 text-center text-white" onclick="getOption()" value="Select">
+
+      <br>
+    </form>
+
+  </div>
+
+  <div class="row m-4">
+    <div class="m-auto text-center w-25 p-3">
+      <form action="/action_page.php">
+        <label for="sel1yy" class="form-label">Source Unit:</label>
+        <select class="form-select" id="sel1" name="sellist1">
+         
+        </select>
+        <br>
+      </form>
+
+      <form>
+        <div class="input-group">
+          <span class="input-group-text">T</span>
+          <input type="text" class="form-control" placeholder="Source value" id="input1"  oninput="getSource(this.value)"
+          onchange="getSource(this.value)">
+        </div>
+      </form>
+    </div>
+
+    <div class="m-auto text-center w-25 p-3">
+      <form action="/action_page.php">
+        <label for="sel1yyy" class="form-label">Convertable unit:</label>
+        <select class="form-select" id="sel2" name="sellist2">
+          
+        </select>
+        <br>
+      </form>
+
+    <p class=".display-6 border border-1 border-secondary w-100 p-2 opacity-75" id="input2">Converted value</p>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
 
 </html>
